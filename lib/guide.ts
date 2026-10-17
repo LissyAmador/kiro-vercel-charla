@@ -1,34 +1,74 @@
-export const hostingTools = [
+export const priorKnowledge = [
   {
-    name: "Vercel / Netlify",
-    text: "Especiales para webs modernas y proyectos de aprendizaje. Rápidos y gratuitos para empezar.",
+    id: "pagina",
+    question: "¿Qué es una página web?",
+    answer:
+      "Es lo que aparece en el navegador cuando entras a una dirección: una landing, un blog o el sitio de esta clase. Chrome, Edge, Firefox o Safari leen unos archivos y los dibujan en pantalla.",
+    points: ["Se abre con un enlace", "El navegador la interpreta", "Vive hecha de archivos"],
   },
   {
-    name: "GitHub Pages",
-    text: "Para publicar directamente desde tu repositorio de código.",
+    id: "hosting",
+    question: "¿Qué es un hosting?",
+    answer:
+      "Es el servicio que guarda esos archivos en una computadora siempre encendida y conectada a Internet. Sin hosting la página solo existe en tu equipo. Con hosting, cualquiera puede abrirla a cualquier hora.",
+    points: ["Aloja los archivos", "Entrega un enlace público", "Está disponible todo el día"],
   },
   {
-    name: "Hostinger / SiteGround",
-    text: "Servicios tradicionales para sitios web y blogs.",
-  },
-];
-
-export const technologies = [
-  {
-    name: "HTML",
-    text: "La estructura de la página: el esqueleto.",
-  },
-  {
-    name: "CSS",
-    text: "El diseño y los estilos visuales: colores, fuentes y bordes.",
+    id: "servicios",
+    question: "¿Qué servicios de hosting conocen?",
+    answer:
+      "En clase usaremos Vercel. Estas son las opciones que más suelen aparecer cuando alguien publica su primera web.",
+    points: [
+      "Vercel y Netlify: webs modernas, con plan gratis para empezar",
+      "GitHub Pages: publica directo desde un repositorio",
+      "Hostinger y SiteGround: hosting clásico para sitios y blogs",
+    ],
   },
   {
-    name: "Tailwind CSS",
-    text: "Un framework que permite dar estilos de forma rápida usando clases prediseñadas.",
+    id: "ide",
+    question: "¿Qué es un IDE?",
+    answer:
+      "Es el programa donde se escribe y organiza el código. Muestra los archivos del proyecto, señala errores y, en Cursor o Kiro, incluye un chat de inteligencia artificial. No es el navegador ni un bloc de notas.",
+    points: ["Editor de código", "Archivos del proyecto juntos", "A veces, un agente de IA"],
   },
   {
-    name: "JavaScript",
-    text: "La lógica y la interactividad: animaciones, botones y envío de datos.",
+    id: "ides",
+    question: "¿Cuáles son los IDE más conocidos?",
+    answer:
+      "Casi todos parten de la misma idea: una ventana para escribir código. La diferencia está en cuánta ayuda de IA traen integrada.",
+    points: [
+      "Visual Studio Code: el editor más usado para web",
+      "Cursor y Kiro: escriben y corrigen contigo con IA",
+      "WebStorm y Sublime Text: otras opciones frecuentes",
+    ],
+  },
+  {
+    id: "html",
+    question: "¿Qué es HTML?",
+    answer:
+      "El esqueleto de la página. Indica qué hay: un menú, un título, una imagen o un formulario. El navegador no inventa esa estructura; la lee del HTML.",
+    points: ["Estructura", "Etiquetas como título y párrafo", "Sin HTML no hay página"],
+  },
+  {
+    id: "css",
+    question: "¿Qué es CSS?",
+    answer:
+      "La apariencia. Define colores, tipografías, espacios y cómo se acomoda el contenido en el celular y en la computadora. Sin CSS la página se lee, pero se ve como un documento plano.",
+    points: ["Colores y tipografía", "Espacios y columnas", "Se adapta a la pantalla"],
+  },
+  {
+    id: "javascript",
+    question: "¿Qué es JavaScript?",
+    answer:
+      "El comportamiento. Hace que la página reaccione: un menú que se abre, un formulario que avisa si falta un dato o un mensaje que aparece al hacer clic.",
+    points: ["Clics y menús", "Validación de formularios", "Mensajes y animaciones"],
+  },
+  {
+    id: "tailwind",
+    question: "¿Qué es Tailwind CSS?",
+    answer:
+      "Una forma rápida de aplicar CSS con clases escritas directo en el HTML, como text-white o rounded-xl. Diseñas sin armar una hoja de estilos desde cero. Es lo que usaremos en el ejercicio.",
+    points: ["Clases listas para usar", "Se escribe junto al HTML", "Acelera el diseño"],
   },
 ];
 

@@ -23,7 +23,7 @@ export const speakerLinks = [
 ];
 
 export const navLinks = [
-  { href: "#conceptos", label: "Conceptos" },
+  { href: "#conceptos", label: "Previos" },
   { href: "#kiro", label: "Kiro" },
   { href: "#guia", label: "Guía" },
   { href: "#deploy", label: "Deploy" },

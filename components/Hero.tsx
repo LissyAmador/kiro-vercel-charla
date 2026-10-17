@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { KiroGhost } from "@/components/KiroGhost";
 import { consolePhases, speaker } from "@/lib/content";
 
 export function Hero() {
@@ -25,10 +26,10 @@ export function Hero() {
               className="h-14 w-14 object-contain"
             />
             <span className="text-left">
-              <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                Comunidad anfitriona
-              </span>
               <span className="block text-sm font-semibold text-white">
+                {speaker.name}
+              </span>
+              <span className="block text-[11px] text-slate-400">
                 {speaker.community}
               </span>
             </span>
@@ -44,15 +45,18 @@ export function Hero() {
           </span>
         </motion.div>
 
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.08 }}
-          className="mt-6 max-w-xl text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4.15rem]"
+          className="mt-6 flex items-center gap-3 sm:gap-5"
         >
-          Construyendo con{" "}
-          <span className="gradient-text">Kiro</span>
-        </motion.h1>
+          <KiroGhost className="h-24 w-[5.4rem] sm:h-32 sm:w-28" />
+          <h1 className="max-w-xl text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4.15rem]">
+            Construyendo con{" "}
+            <span className="gradient-text">Kiro</span>
+          </h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
