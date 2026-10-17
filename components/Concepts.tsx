@@ -1,28 +1,12 @@
-import {
-  AppWindow,
-  Braces,
-  Code2,
-  Globe,
-  MonitorSmartphone,
-  Palette,
-  Server,
-  Sparkles,
-  Wind,
-} from "lucide-react";
-import { FlipCard } from "@/components/FlipCard";
+import { Code2, Globe, Server } from "lucide-react";
+import { KnowledgeCard } from "@/components/KnowledgeCard";
 import { SectionHeading } from "@/components/Reveal";
 import { priorKnowledge } from "@/lib/guide";
 
 const icons = {
   pagina: Globe,
   hosting: Server,
-  servicios: MonitorSmartphone,
   ide: Code2,
-  ides: AppWindow,
-  html: Braces,
-  css: Palette,
-  javascript: Sparkles,
-  tailwind: Wind,
 } as const;
 
 export function Concepts() {
@@ -31,19 +15,19 @@ export function Concepts() {
       <SectionHeading
         eyebrow="02 — Conocimientos previos"
         title="Antes de escribir la primera línea"
-        text="Nueve preguntas para alinear al grupo: qué es una página, dónde se publica, con qué programa se escribe y con qué piezas se arma. Toca una tarjeta para voltearla y ver el concepto."
+        text="Tres preguntas. Toca una tarjeta para voltearla y ver la respuesta."
       />
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-12 grid gap-4 lg:grid-cols-3">
         {priorKnowledge.map((card) => {
           const Icon = icons[card.id as keyof typeof icons];
           return (
-            <FlipCard
+            <KnowledgeCard
               key={card.id}
               question={card.question}
               answer={card.answer}
-              points={card.points}
-              icon={<Icon size={18} />}
+              groups={card.groups}
+              icon={<Icon size={20} />}
             />
           );
         })}

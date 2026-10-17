@@ -3,98 +3,150 @@ export const priorKnowledge = [
     id: "pagina",
     question: "¿Qué es una página web?",
     answer:
-      "Es lo que aparece en el navegador cuando entras a una dirección: una landing, un blog o el sitio de esta clase. Chrome, Edge, Firefox o Safari leen unos archivos y los dibujan en pantalla.",
-    points: ["Se abre con un enlace", "El navegador la interpreta", "Vive hecha de archivos"],
+      "Es lo que el navegador muestra al abrir una dirección: una landing, un blog o el sitio de esta clase. Chrome, Edge, Firefox o Safari leen los archivos y los dibujan en pantalla.",
+    groups: [
+      {
+        title: "Tecnologías actuales",
+        items: [
+          {
+            name: "CSS",
+            text: "El lenguaje de los estilos: color, tipografía, espacio y cómo se ve en el celular.",
+          },
+          {
+            name: "Tailwind CSS",
+            text: "La forma más usada hoy para diseñar rápido con clases. Es la que usaremos.",
+          },
+          {
+            name: "React",
+            text: "Interfaces actuales armadas por componentes, cuando la página necesita piezas que reaccionan.",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "hosting",
     question: "¿Qué es un hosting?",
     answer:
-      "Es el servicio que guarda esos archivos en una computadora siempre encendida y conectada a Internet. Sin hosting la página solo existe en tu equipo. Con hosting, cualquiera puede abrirla a cualquier hora.",
-    points: ["Aloja los archivos", "Entrega un enlace público", "Está disponible todo el día"],
-  },
-  {
-    id: "servicios",
-    question: "¿Qué servicios de hosting conocen?",
-    answer:
-      "En clase usaremos Vercel. Estas son las opciones que más suelen aparecer cuando alguien publica su primera web.",
-    points: [
-      "Vercel y Netlify: webs modernas, con plan gratis para empezar",
-      "GitHub Pages: publica directo desde un repositorio",
-      "Hostinger y SiteGround: hosting clásico para sitios y blogs",
+      "Es el servicio que guarda los archivos de la página en un servidor siempre conectado, para que cualquiera pueda abrirla.",
+    groups: [
+      {
+        title: "Dominio",
+        items: [
+          {
+            name: "El nombre",
+            text: "Es la dirección que se escribe, como tuproyecto.com. No guarda los archivos: solo apunta hacia ellos.",
+          },
+        ],
+      },
+      {
+        title: "La diferencia",
+        items: [
+          {
+            name: "Nombre y casa",
+            text: "El dominio es el nombre. El hosting es donde viven los archivos. Puedes publicar en Vercel con un enlace gratis y comprar el dominio después.",
+          },
+        ],
+      },
+      {
+        title: "Dónde publicar",
+        items: [
+          { name: "Vercel", text: "La usaremos en la charla." },
+          { name: "Netlify", text: "Otra opción rápida para webs modernas." },
+          { name: "Cloudflare Pages", text: "Publica desde el repositorio." },
+          { name: "GitHub Pages", text: "Sitio directo desde GitHub." },
+        ],
+      },
+      {
+        title: "Dónde comprar el dominio",
+        items: [
+          { name: "Cloudflare", text: "Registro de dominios a precio de costo." },
+          { name: "Namecheap", text: "Compra clara para empezar." },
+          { name: "Porkbun", text: "Otra opción actual y sencilla." },
+          { name: "GoDaddy", text: "De las más conocidas." },
+        ],
+      },
     ],
   },
   {
     id: "ide",
     question: "¿Qué es un IDE?",
     answer:
-      "Es el programa donde se escribe y organiza el código. Muestra los archivos del proyecto, señala errores y, en Cursor o Kiro, incluye un chat de inteligencia artificial. No es el navegador ni un bloc de notas.",
-    points: ["Editor de código", "Archivos del proyecto juntos", "A veces, un agente de IA"],
-  },
-  {
-    id: "ides",
-    question: "¿Cuáles son los IDE más conocidos?",
-    answer:
-      "Casi todos parten de la misma idea: una ventana para escribir código. La diferencia está en cuánta ayuda de IA traen integrada.",
-    points: [
-      "Visual Studio Code: el editor más usado para web",
-      "Cursor y Kiro: escriben y corrigen contigo con IA",
-      "WebStorm y Sublime Text: otras opciones frecuentes",
+      "Es el programa donde se escribe y organiza el código. Reúne los archivos del proyecto, señala errores y, en los más actuales, incluye un agente de inteligencia artificial.",
+    groups: [
+      {
+        title: "Los más usados hoy",
+        items: [
+          { name: "Kiro", text: "Agente en el editor. Es el de esta charla." },
+          { name: "Cursor", text: "Escribe y corrige contigo con IA." },
+          { name: "VS Code", text: "El editor más extendido para web." },
+          { name: "WebStorm", text: "De JetBrains, frecuente en equipos." },
+          { name: "Zed", text: "Editor ligero y rápido, pensado para el flujo actual." },
+        ],
+      },
     ],
   },
-  {
-    id: "html",
-    question: "¿Qué es HTML?",
-    answer:
-      "El esqueleto de la página. Indica qué hay: un menú, un título, una imagen o un formulario. El navegador no inventa esa estructura; la lee del HTML.",
-    points: ["Estructura", "Etiquetas como título y párrafo", "Sin HTML no hay página"],
-  },
-  {
-    id: "css",
-    question: "¿Qué es CSS?",
-    answer:
-      "La apariencia. Define colores, tipografías, espacios y cómo se acomoda el contenido en el celular y en la computadora. Sin CSS la página se lee, pero se ve como un documento plano.",
-    points: ["Colores y tipografía", "Espacios y columnas", "Se adapta a la pantalla"],
-  },
-  {
-    id: "javascript",
-    question: "¿Qué es JavaScript?",
-    answer:
-      "El comportamiento. Hace que la página reaccione: un menú que se abre, un formulario que avisa si falta un dato o un mensaje que aparece al hacer clic.",
-    points: ["Clics y menús", "Validación de formularios", "Mensajes y animaciones"],
-  },
-  {
-    id: "tailwind",
-    question: "¿Qué es Tailwind CSS?",
-    answer:
-      "Una forma rápida de aplicar CSS con clases escritas directo en el HTML, como text-white o rounded-xl. Diseñas sin armar una hoja de estilos desde cero. Es lo que usaremos en el ejercicio.",
-    points: ["Clases listas para usar", "Se escribe junto al HTML", "Acelera el diseño"],
-  },
+];
+
+export const kiroLinks = [
+  { label: "Sitio oficial", href: "https://kiro.dev/" },
+  { label: "Documentación", href: "https://kiro.dev/docs" },
+  { label: "Descargas", href: "https://kiro.dev/downloads/" },
+  { label: "Anuncio oficial", href: "https://kiro.dev/blog/introducing-kiro/" },
 ];
 
 export const kiroFacts = [
   {
-    question: "¿Qué es Kiro / Cursor?",
+    question: "¿Qué es?",
     answer:
-      "Es un editor de código (IDE) impulsado por inteligencia artificial. Sirve para acelerar el desarrollo, escribir código mediante prompts en lenguaje natural y corregir errores automáticamente.",
+      "Un IDE agéntico creado y operado por AWS. Escribes lo que necesitas y Kiro lo convierte en una especificación: requisitos, diseño y tareas, antes de implementar el código.",
   },
   {
     question: "¿Cuándo nació?",
     answer:
-      "Surgió como una evolución de los editores tradicionales para integrar agentes de IA avanzados directamente en la ventana de trabajo del desarrollador.",
+      "Se anunció el 14 de julio de 2025. Nikhil Swaminathan y Deepak Singh lo presentaron para acompañar un proyecto desde el prototipo hasta producción. El 17 de noviembre de 2025 pasó a disponibilidad general.",
   },
   {
-    question: "¿Por qué nació y para qué se usa?",
+    question: "¿Qué hace?",
     answer:
-      "Nació para democratizar la programación. Permite a estudiantes y desarrolladores enfocarse en la lógica y la creatividad, y delegar las tareas repetitivas de código a la IA.",
+      "Ordena el trabajo del agente. A partir de un prompt arma la especificación, implementa las tareas y puede lanzar hooks al guardar, crear o borrar archivos.",
   },
 ];
 
+export const kiroHighlights = [
+  "No necesitas una cuenta de AWS para empezar.",
+  "Entras con GitHub, Google, AWS Builder ID o IAM Identity Center.",
+  "Está construido sobre Code OSS: puedes llevar ajustes de VS Code y extensiones de Open VSX.",
+  "Funciona en Mac, Windows y Linux.",
+  "También vive en la terminal, en el navegador y en el celular.",
+  "Conecta otras herramientas con MCP y guía al agente con archivos de steering.",
+];
+
 export const kiroCapabilities = [
-  "Generar componentes y páginas completas a partir de descripciones en texto.",
-  "Explicar líneas de código complejas.",
-  "Corregir errores (bugs) de manera instantánea.",
-  "Refactorizar proyectos y conectarlos con APIs externas.",
+  {
+    title: "De la idea a la especificación",
+    text: "Un prompt se vuelve requisitos, diseño y una lista de tareas enlazadas.",
+  },
+  {
+    title: "Implementar con el agente",
+    text: "Ejecutas las tareas en orden y revisas los cambios antes de seguir.",
+  },
+  {
+    title: "Explicar y corregir",
+    text: "El chat del agente aclara un archivo, propone un arreglo o refactoriza.",
+  },
+  {
+    title: "Automatizar con hooks",
+    text: "Al guardar un archivo puede actualizar pruebas, documentación o una revisión de seguridad.",
+  },
+  {
+    title: "Conectar herramientas",
+    text: "MCP suma herramientas especializadas y steering fija cómo debe comportarse el agente.",
+  },
+  {
+    title: "Elegir dónde trabajar",
+    text: "El mismo flujo está en el IDE, en la CLI y en Kiro Web.",
+  },
 ];
 
 export const guideSteps = [

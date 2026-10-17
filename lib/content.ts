@@ -7,19 +7,31 @@ export const docs = {
 
 export const speaker = {
   name: "Lissy Amador",
-  role: "Speaker",
+  role: "Tech Educator & Software Innovator",
+  focus: "IA, Web & STEAM",
   community: "AWS User Group Guatemala",
   photo: "/lissy-amador.jpg",
   logo: "/aws-ug-guatemala.png",
   summary:
-    "Conduce esta sesión en vivo: de la especificación en Kiro al sitio publicado en Vercel.",
+    "Fundadora de EDUKIDS e innovadora en educación tecnológica con amplia experiencia en desarrollo de software, inteligencia artificial y proyectos STEAM.",
 };
 
-/** Sustituye estos href por las redes reales de Lissy Amador antes de la charla. */
 export const speakerLinks = [
-  { label: "LinkedIn", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "X", href: "#" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/lissyamadorsazo/",
+    detail: "lissyamadorsazo",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/lissyamadors/",
+    detail: "@lissyamadors",
+  },
+  {
+    label: "EDUKIDS",
+    href: "https://www.facebook.com/gaming/edukidsgt",
+    detail: "Academia en Facebook",
+  },
 ];
 
 export const navLinks = [
@@ -31,45 +43,97 @@ export const navLinks = [
   { href: "#ponente", label: "Ponente" },
 ];
 
-export const consolePhases = [
+export const icebreakers = [
   {
-    key: "requirements",
-    kicker: "Requirements",
-    title: "Especificar antes de codificar",
-    lines: [
-      "Landing de robótica",
-      "Menú, características y contacto",
-      "HTML + Tailwind CSS",
+    key: "error-404",
+    title: "El Error 404",
+    prompt:
+      "Entras a una URL buscando documentación o información y te sale un “Error 404: Not Found”...",
+    choices: [
+      {
+        id: "A",
+        gesture: "Manos en la cabeza",
+        text: "Asumo que el servidor o el enlace están caídos, modifico manualmente la URL a ver si le atino al directorio correcto.",
+      },
+      {
+        id: "B",
+        gesture: "Brazos cruzados",
+        text: "Cierro la pestaña de inmediato, regreso a Google y busco un enlace alternativo.",
+      },
+      {
+        id: "C",
+        gesture: "Brazos arriba",
+        text: "Le pido a una IA o a un agente que me resuma el tema o me busque una fuente similar activa.",
+      },
     ],
   },
   {
-    key: "design",
-    kicker: "Design",
-    title: "La IA propone la estructura",
-    lines: [
-      "HTML: el esqueleto",
-      "Tailwind: colores y layout",
-      "Formulario de contacto",
+    key: "busqueda",
+    title: "La búsqueda de información",
+    prompt:
+      "Llevas 15 minutos en Google y no encuentras la solución a un problema técnico o de investigación...",
+    choices: [
+      {
+        id: "A",
+        gesture: "Manos en la cabeza",
+        text: "Cambio las palabras clave en la búsqueda (queries) y pruebo buscando directamente en inglés.",
+      },
+      {
+        id: "B",
+        gesture: "Brazos cruzados",
+        text: "Abro los comentarios de Reddit, Stack Overflow o foros para ver cómo lo resolvió alguien más.",
+      },
+      {
+        id: "C",
+        gesture: "Brazos arriba",
+        text: "Abro Kiro o ChatGPT, le describo el problema exacto y le pido que me redacte la solución paso a paso.",
+      },
     ],
   },
   {
-    key: "tasks",
-    kicker: "Tasks",
-    title: "El agente arma la landing",
-    lines: [
-      "Menú de navegación",
-      "Sección de características",
-      "Formulario listo para revisar",
+    key: "validacion",
+    title: "Validación y “stalkeo” técnico",
+    prompt:
+      "Antes de usar una herramienta, librería o repositorio nuevo para un proyecto...",
+    choices: [
+      {
+        id: "A",
+        gesture: "Manos en la cabeza",
+        text: "Reviso la documentación oficial a fondo para entender la arquitectura antes de probar nada.",
+      },
+      {
+        id: "B",
+        gesture: "Brazos cruzados",
+        text: "Reviso opiniones, estrellas en GitHub o comentarios de la comunidad para corroborar si realmente funciona.",
+      },
+      {
+        id: "C",
+        gesture: "Brazos arriba",
+        text: "Corro un ejemplo rápido en vivo o dejo que la IA genere un prototipo básico para probarlo en minutos.",
+      },
     ],
   },
   {
-    key: "deploy",
-    kicker: "Vercel",
-    title: "Publicar en un clic",
-    lines: [
-      "Repositorio conectado",
-      "Preview generado",
-      "Producción en vivo",
+    key: "proyecto",
+    title: "Empezar un proyecto web desde cero",
+    prompt:
+      "Tienes que crear la interfaz de una página web desde cero para un proyecto o presentación...",
+    choices: [
+      {
+        id: "A",
+        gesture: "Manos en la cabeza",
+        text: "Abro el editor y escribo toda la estructura desde cero a mano para tener control total de cada línea.",
+      },
+      {
+        id: "B",
+        gesture: "Brazos cruzados",
+        text: "Busco una plantilla o un maquetador visual para no complicarme con el diseño.",
+      },
+      {
+        id: "C",
+        gesture: "Brazos arriba",
+        text: "Le describo a Kiro en lenguaje natural lo que necesito para que me entregue el código listo y desplegarlo en Vercel.",
+      },
     ],
   },
 ];

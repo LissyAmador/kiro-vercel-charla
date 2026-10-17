@@ -1,7 +1,11 @@
-import { ArrowUpRight, Github, Linkedin } from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, Linkedin } from "lucide-react";
 import { docs, speaker, speakerLinks } from "@/lib/content";
 
-const speakerIcons = [Linkedin, Github, XIcon];
+const speakerIcons = {
+  LinkedIn: Linkedin,
+  Instagram: Instagram,
+  EDUKIDS: Facebook,
+} as const;
 
 export function FooterCta() {
   return (
@@ -77,8 +81,8 @@ export function FooterCta() {
         <div className="flex flex-wrap gap-2">
           <FooterLink href={docs.kiro} label="Docs Kiro" />
           <FooterLink href={docs.vercel} label="Docs Vercel" />
-          {speakerLinks.map((link, index) => {
-            const Icon = speakerIcons[index];
+          {speakerLinks.map((link) => {
+            const Icon = speakerIcons[link.label as keyof typeof speakerIcons];
             return (
               <a
                 key={link.label}
@@ -88,7 +92,7 @@ export function FooterCta() {
                   : {})}
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-xs font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-white/30 hover:text-white"
               >
-                <Icon />
+                <Icon size={14} />
                 {link.label}
               </a>
             );
@@ -113,10 +117,3 @@ function FooterLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-function XIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
-      <path d="M9.5 6.8 15.2 0h-1.4L8.9 5.9 4.6 0H0l6 8.7L0 16h1.4l5.2-6.1L11.4 16H16L9.5 6.8Zm-1.8 2.1-.6-.9L2 1.1h2.1l3.9 5.5.6.9 5.1 7.3H11.6L7.7 8.9Z" />
-    </svg>
-  );
-}

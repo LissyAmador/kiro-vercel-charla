@@ -2,9 +2,9 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { KiroGhost } from "@/components/KiroGhost";
-import { consolePhases, speaker } from "@/lib/content";
+import { icebreakers, speaker } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -89,26 +89,6 @@ export function Hero() {
             <ArrowUpRight size={16} />
           </a>
         </motion.div>
-
-        <motion.dl
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.36 }}
-          className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-6"
-        >
-          {[
-            ["5", "pasos para crear la web"],
-            ["IA", "escribe con un prompt"],
-            ["Vercel", "tu enlace público"],
-          ].map(([value, label]) => (
-            <div key={label}>
-              <dt className="text-lg font-semibold text-white sm:text-2xl">{value}</dt>
-              <dd className="mt-1 text-xs leading-snug text-slate-400 sm:text-sm">
-                {label}
-              </dd>
-            </div>
-          ))}
-        </motion.dl>
       </div>
 
       <KiroConsole />
@@ -119,15 +99,7 @@ export function Hero() {
 function KiroConsole() {
   const reduce = useReducedMotion();
   const [index, setIndex] = useState(0);
-  const phase = consolePhases[index];
-
-  useEffect(() => {
-    if (reduce) return;
-    const id = window.setInterval(() => {
-      setIndex((current) => (current + 1) % consolePhases.length);
-    }, 2800);
-    return () => window.clearInterval(id);
-  }, [reduce]);
+  const question = icebreakers[index];
 
   return (
     <motion.div
@@ -153,7 +125,7 @@ function KiroConsole() {
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="ml-2 text-xs font-medium text-slate-400">
-                kiro · spec session
+                Rompehielos
               </span>
             </div>
             <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-200">
@@ -161,75 +133,61 @@ function KiroConsole() {
             </span>
           </div>
 
-          <div className="mt-4 flex gap-2">
-            {consolePhases.map((item, itemIndex) => (
+          <div className="mt-4 grid grid-cols-4 gap-2">
+            {icebreakers.map((item, itemIndex) => (
               <button
                 key={item.key}
                 type="button"
                 onClick={() => setIndex(itemIndex)}
-                className={`h-1.5 flex-1 rounded-full transition ${
-                  itemIndex === index ? "bg-white" : "bg-white/15 hover:bg-white/30"
+                aria-pressed={itemIndex === index}
+                aria-label={`Pregunta ${itemIndex + 1}: ${item.title}`}
+                className={`rounded-xl border px-2 py-2 text-xs font-semibold transition ${
+                  itemIndex === index
+                    ? "border-white/40 bg-white text-black"
+                    : "border-white/10 bg-white/5 text-slate-300 hover:border-white/25 hover:text-white"
                 }`}
-                aria-label={`Ver fase ${item.kicker}`}
-              />
+              >
+                {itemIndex + 1}
+              </button>
             ))}
           </div>
 
-          <div className="relative mt-5 min-h-[280px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-5">
+          <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-5">
             <AnimatePresence mode="wait">
               <motion.div
-                key={phase.key}
+                key={question.key}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.35 }}
               >
                 <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-indigo-300">
-                  {phase.kicker}
+                  Pregunta {index + 1} de {icebreakers.length}
                 </p>
-                <h3 className="mt-2 text-xl font-semibold text-white">{phase.title}</h3>
-                <ul className="mt-5 space-y-3">
-                  {phase.lines.map((line) => (
-                    <li key={line} className="flex items-start gap-3 text-sm text-slate-300">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-tide" />
-                      {line}
+                <h3 className="mt-2 text-xl font-semibold text-white">{question.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                  “{question.prompt}”
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {question.choices.map((choice) => (
+                    <li
+                      key={choice.id}
+                      className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2.5"
+                    >
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-200">
+                        {choice.id} · {choice.gesture}
+                      </p>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-200">
+                        {choice.text}
+                      </p>
                     </li>
                   ))}
                 </ul>
               </motion.div>
             </AnimatePresence>
-
-            <div className="mt-6 flex items-center justify-between rounded-xl border border-white/10 bg-white px-3 py-2.5 text-black">
-              <div className="flex items-center gap-2">
-                <VercelMark />
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-neutral-500">
-                    Destino
-                  </p>
-                  <p className="text-sm font-semibold">vercel.app · production</p>
-                </div>
-              </div>
-              <span
-                className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${
-                  phase.key === "deploy"
-                    ? "bg-black text-white"
-                    : "bg-neutral-100 text-neutral-600"
-                }`}
-              >
-                {phase.key === "deploy" ? "Ready" : "En cola"}
-              </span>
-            </div>
           </div>
         </div>
       </div>
     </motion.div>
-  );
-}
-
-function VercelMark() {
-  return (
-    <svg width="18" height="16" viewBox="0 0 16 14" aria-hidden="true">
-      <path d="M8 0L16 14H0L8 0Z" fill="currentColor" />
-    </svg>
   );
 }
