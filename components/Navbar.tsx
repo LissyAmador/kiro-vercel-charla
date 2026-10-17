@@ -26,9 +26,9 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-[4.5rem] sm:px-8">
         <a href="#inicio" className="flex items-center gap-2.5">
           <img
-            src={speaker.logo}
-            alt="AWS User Group Guatemala"
-            className="h-10 w-10 object-contain"
+            src={speaker.avatar}
+            alt=""
+            className="h-10 w-10 rounded-full object-cover object-[center_18%] ring-1 ring-white/15"
           />
           <span className="text-sm font-semibold tracking-tight text-white">
             Kiro

@@ -1,3 +1,5 @@
+export const feedbackForm = "https://docs.google.com/forms/d/e/FORM_ID/viewform";
+
 export const docs = {
   kiro: "https://kiro.dev/docs",
   vercel: "https://vercel.com/docs",
@@ -7,13 +9,14 @@ export const docs = {
 
 export const speaker = {
   name: "Lissy Amador",
-  role: "Tech Educator & Software Innovator",
-  focus: "IA, Web & STEAM",
+  role: "Licenciada en Innovación Educativa",
+  focus: "Estudiante de Maestría en Docencia Universitaria",
   community: "AWS User Group Guatemala",
   photo: "/lissy-amador.jpg",
+  avatar: "/lissy-amador-perfil.png",
   logo: "/aws-ug-guatemala.png",
   summary:
-    "Fundadora de EDUKIDS e innovadora en educación tecnológica con amplia experiencia en desarrollo de software, inteligencia artificial y proyectos STEAM.",
+    "Apasionada por la tecnología y convencida de su poder para transformar vidas, fundé EDUKIDS para despertar la curiosidad, impulsar la creatividad y acercar las nuevas tecnologías a las futuras generaciones. Actualmente exploro cómo la programación y la inteligencia artificial pueden convertirse en herramientas para crear soluciones con impacto.",
 };
 
 export const speakerLinks = [
@@ -41,6 +44,7 @@ export const navLinks = [
   { href: "#deploy", label: "Deploy" },
   { href: "#galeria", label: "Galería" },
   { href: "#ponente", label: "Ponente" },
+  { href: "#feedback", label: "Califica" },
 ];
 
 export const icebreakers = [

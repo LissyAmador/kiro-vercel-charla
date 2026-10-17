@@ -10,7 +10,7 @@ export function Speaker() {
           <div className="relative mx-auto aspect-[3/4] w-full max-w-[280px] overflow-hidden rounded-[1.5rem] border border-white/10">
             <img
               src={speaker.photo}
-              alt={`${speaker.name}, Tech Educator y fundadora de EDUKIDS`}
+              alt={`${speaker.name}, licenciada en Innovación Educativa y fundadora de EDUKIDS`}
               className="h-full w-full object-cover object-[center_15%]"
             />
           </div>
@@ -19,25 +19,13 @@ export function Speaker() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-tide">
               Ponente
             </p>
-            <div className="mt-4 flex items-center gap-4">
-              <img
-                src={speaker.logo}
-                alt=""
-                className="h-16 w-16 shrink-0 object-contain"
-              />
-              <div>
-                <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-                  {speaker.name}
-                </h2>
-                <p className="mt-2 text-sm font-medium text-cyan-100 sm:text-base">
-                  {speaker.role}
-                  <span className="mx-2 text-slate-500">·</span>
-                  {speaker.focus}
-                </p>
-                <p className="mt-1 text-sm text-slate-400">{speaker.community}</p>
-              </div>
-            </div>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+              {speaker.name}
+            </h2>
+            <p className="mt-3 text-lg font-medium text-cyan-100">{speaker.role}</p>
+            <p className="mt-1 text-lg text-slate-200">{speaker.focus}</p>
+            <p className="mt-2 text-base text-slate-400">{speaker.community}</p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200">
               {speaker.summary}
             </p>
 

@@ -21,15 +21,15 @@ export function Hero() {
         >
           <a href="#ponente" className="inline-flex items-center gap-2.5 pr-1">
             <img
-              src={speaker.logo}
+              src={speaker.avatar}
               alt=""
-              className="h-14 w-14 object-contain"
+              className="h-14 w-14 rounded-full object-cover object-[center_18%] ring-2 ring-white/15"
             />
             <span className="text-left">
               <span className="block text-sm font-semibold text-white">
                 {speaker.name}
               </span>
-              <span className="block text-[11px] text-slate-400">
+              <span className="block text-[0.7rem] text-slate-400">
                 {speaker.community}
               </span>
             </span>
@@ -128,7 +128,7 @@ function KiroConsole() {
                 Rompehielos
               </span>
             </div>
-            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-200">
+            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-cyan-200">
               En vivo
             </span>
           </div>
@@ -161,7 +161,7 @@ function KiroConsole() {
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.35 }}
               >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-indigo-300">
                   Pregunta {index + 1} de {icebreakers.length}
                 </p>
                 <h3 className="mt-2 text-xl font-semibold text-white">{question.title}</h3>
@@ -174,7 +174,7 @@ function KiroConsole() {
                       key={choice.id}
                       className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2.5"
                     >
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-cyan-200">
+                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-cyan-200">
                         {choice.id} · {choice.gesture}
                       </p>
                       <p className="mt-1 text-sm leading-relaxed text-slate-200">

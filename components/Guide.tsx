@@ -30,7 +30,7 @@ export function Guide() {
                   <p className="mt-2 text-sm leading-relaxed text-slate-300 sm:text-base">{step.text}</p>
                   {step.example && (
                     <blockquote className="mt-4 rounded-2xl border border-indigo-400/30 bg-indigo-500/10 px-4 py-3 text-sm leading-relaxed text-indigo-100">
-                      <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-300">
+                      <span className="mb-1 block text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-indigo-300">
                         Ejemplo de prompt
                       </span>
                       “{step.example}”

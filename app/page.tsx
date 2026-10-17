@@ -1,4 +1,5 @@
 import { Concepts } from "@/components/Concepts";
+import { Feedback } from "@/components/Feedback";
 import { Deploy } from "@/components/Deploy";
 import { FooterCta } from "@/components/FooterCta";
 import { Gallery } from "@/components/Gallery";
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Deploy />
         <Gallery />
         <Speaker />
+        <Feedback />
       </main>
       <FooterCta />
     </>

@@ -1,5 +1,5 @@
 import { ArrowUpRight, Facebook, Instagram, Linkedin } from "lucide-react";
-import { docs, speaker, speakerLinks } from "@/lib/content";
+import { docs, feedbackForm, speaker, speakerLinks } from "@/lib/content";
 
 const speakerIcons = {
   LinkedIn: Linkedin,
@@ -40,12 +40,12 @@ export function FooterCta() {
             Ir a la galería
           </a>
           <a
-            href={docs.kiro}
+            href={feedbackForm}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/40"
           >
-            Abrir documentación de Kiro
+            Calificar la charla
             <ArrowUpRight size={16} />
           </a>
         </div>
@@ -65,9 +65,9 @@ export function FooterCta() {
       <div className="flex flex-col gap-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <a href="#ponente" className="flex items-center gap-3">
           <img
-            src={speaker.logo}
+            src={speaker.avatar}
             alt=""
-            className="h-12 w-12 object-contain"
+            className="h-12 w-12 rounded-full object-cover object-[center_18%] ring-2 ring-white/15"
           />
           <span>
             <span className="block text-sm font-medium text-white">

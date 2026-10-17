@@ -40,13 +40,13 @@ export function SectionHeading({
 }) {
   return (
     <Reveal className="max-w-3xl">
-      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-tide">
+      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-tide">
         {eyebrow}
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+      <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
         {title}
       </h2>
-      <p className="mt-5 text-base leading-relaxed text-slate-300 sm:text-lg">
+      <p className="mt-5 text-lg leading-relaxed text-slate-200 sm:text-xl">
         {text}
       </p>
     </Reveal>

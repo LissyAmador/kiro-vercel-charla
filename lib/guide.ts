@@ -86,6 +86,79 @@ export const priorKnowledge = [
       },
     ],
   },
+  {
+    id: "aws",
+    question: "¿Qué es AWS?",
+    answer:
+      "Amazon Web Services es la nube de Amazon. En vez de comprar servidores, una empresa alquila cómputo, almacenamiento y otros servicios por internet, y paga por lo que usa.",
+    groups: [
+      {
+        title: "Por qué aprenderlo",
+        items: [
+          {
+            name: "Se usa en todas partes",
+            text: "Empresas de todo tamaño corren ahí sitios web, datos e inteligencia artificial.",
+          },
+          {
+            name: "Abre puertas",
+            text: "Sirve para desarrollo, operaciones, datos y seguridad, no solo para un puesto.",
+          },
+          {
+            name: "Se puede empezar de cero",
+            text: "La certificación de fundamentos no pide experiencia previa.",
+          },
+        ],
+      },
+      {
+        title: "Certificaciones",
+        items: [
+          {
+            name: "Fundamentos",
+            text: "Cloud Practitioner y AI Practitioner. Son la puerta de entrada.",
+          },
+          {
+            name: "Associate",
+            text: "Solutions Architect es la más pedida. También están Developer, CloudOps, Data Engineer y Machine Learning Engineer.",
+          },
+          {
+            name: "Professional y Specialty",
+            text: "Arquitectura, DevOps, IA generativa y seguridad, cuando ya hay práctica.",
+          },
+        ],
+      },
+      {
+        title: "Trabajos a los que puedes aplicar",
+        items: [
+          { name: "Soporte cloud", text: "Ayuda a equipos que ya usan la nube." },
+          { name: "Desarrollador cloud", text: "Construye aplicaciones sobre AWS." },
+          { name: "Arquitecto de soluciones", text: "Diseña cómo se arma un sistema en la nube." },
+          { name: "DevOps o datos", text: "Opera despliegues o mueve y prepara datos." },
+          { name: "Seguridad", text: "Cuida accesos, redes y datos en la cuenta." },
+        ],
+      },
+      {
+        title: "Cuánto se puede ganar",
+        items: [
+          {
+            name: "Fundamentos",
+            text: "En Estados Unidos, cerca de 86 000 a 105 000 USD al año.",
+          },
+          {
+            name: "Associate",
+            text: "Cerca de 120 000 a 145 000 USD al año.",
+          },
+          {
+            name: "Professional",
+            text: "Cerca de 150 000 a 176 000 USD al año.",
+          },
+          {
+            name: "El país cambia la cifra",
+            text: "En un puesto local de Latinoamérica el sueldo es menor. Un rol remoto pagado en dólares se acerca más a esos rangos. Cuentan también la experiencia y el inglés.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const kiroLinks = [

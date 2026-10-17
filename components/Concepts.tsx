@@ -1,4 +1,4 @@
-import { Code2, Globe, Server } from "lucide-react";
+import { Cloud, Code2, Globe, Server } from "lucide-react";
 import { KnowledgeCard } from "@/components/KnowledgeCard";
 import { SectionHeading } from "@/components/Reveal";
 import { priorKnowledge } from "@/lib/guide";
@@ -7,6 +7,7 @@ const icons = {
   pagina: Globe,
   hosting: Server,
   ide: Code2,
+  aws: Cloud,
 } as const;
 
 export function Concepts() {
@@ -15,10 +16,10 @@ export function Concepts() {
       <SectionHeading
         eyebrow="02 — Conocimientos previos"
         title="Antes de escribir la primera línea"
-        text="Tres preguntas. Toca una tarjeta para voltearla y ver la respuesta."
+        text="Cuatro preguntas. Toca una tarjeta para voltearla y ver la respuesta."
       />
 
-      <div className="mt-12 grid gap-4 lg:grid-cols-3">
+      <div className="mt-12 grid gap-4 lg:grid-cols-2">
         {priorKnowledge.map((card) => {
           const Icon = icons[card.id as keyof typeof icons];
           return (

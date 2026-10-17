@@ -23,13 +23,13 @@ export function KiroIntro() {
             <div className="flex items-center gap-4">
               <KiroGhost className="h-20 w-[4.5rem]" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-tide">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-tide">
                   Hecho por AWS
                 </p>
-                <h3 className="mt-1 text-2xl font-semibold text-white">El agente en el editor</h3>
+                <h3 className="mt-1 text-3xl font-semibold text-white">El agente en el editor</h3>
               </div>
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-slate-300 sm:text-base">
+            <p className="mt-5 text-lg leading-relaxed text-slate-300">
               Kiro trabaja contigo dentro del editor. Primero deja por escrito qué se va a
               construir y después el agente implementa esas tareas. La especificación se
               queda en el proyecto, no solo en el chat.
@@ -41,7 +41,7 @@ export function KiroIntro() {
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-2 text-xs font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-white/30 hover:text-white"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-2 text-base font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-white/30 hover:text-white"
                 >
                   {link.label}
                   <ArrowUpRight size={13} />
@@ -69,9 +69,9 @@ export function KiroIntro() {
         {kiroFacts.map((fact, index) => (
           <Reveal key={fact.question} delay={index * 0.06}>
             <article className="card-lift glass-card h-full rounded-3xl border border-white/10 p-6">
-              <p className="font-mono text-xs text-white/40">0{index + 1}</p>
-              <h3 className="mt-4 text-xl font-semibold text-white">{fact.question}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">{fact.answer}</p>
+              <p className="font-mono text-sm text-white/40">0{index + 1}</p>
+              <h3 className="mt-4 text-2xl font-semibold text-white">{fact.question}</h3>
+              <p className="mt-3 text-lg leading-relaxed text-slate-200">{fact.answer}</p>
             </article>
           </Reveal>
         ))}
@@ -79,12 +79,12 @@ export function KiroIntro() {
 
       <Reveal className="mt-4">
         <div className="rounded-3xl border border-white/10 bg-black/40 p-6 sm:p-7">
-          <h3 className="text-lg font-semibold text-white">Datos interesantes</h3>
+          <h3 className="text-2xl font-semibold text-white">Datos interesantes</h3>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {kiroHighlights.map((item) => (
               <li
                 key={item}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm leading-relaxed text-slate-200"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-lg leading-relaxed text-slate-100"
               >
                 {item}
               </li>
@@ -95,15 +95,15 @@ export function KiroIntro() {
 
       <Reveal className="mt-4">
         <div>
-          <h3 className="text-lg font-semibold text-white">Qué puedes hacer con Kiro</h3>
+          <h3 className="text-2xl font-semibold text-white">Qué puedes hacer con Kiro</h3>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {kiroCapabilities.map((item) => (
               <li
                 key={item.title}
                 className="card-lift glass-card rounded-3xl border border-white/10 p-5"
               >
-                <p className="font-semibold text-white">{item.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.text}</p>
+                <p className="text-xl font-semibold text-white">{item.title}</p>
+                <p className="mt-2 text-lg leading-relaxed text-slate-200">{item.text}</p>
               </li>
             ))}
           </ul>
