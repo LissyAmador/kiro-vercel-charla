@@ -1,5 +1,5 @@
 import { ArrowUpRight, Facebook, Instagram, Linkedin } from "lucide-react";
-import { docs, feedbackForm, speaker, speakerLinks } from "@/lib/content";
+import { docs, speaker, speakerLinks } from "@/lib/content";
 
 const speakerIcons = {
   LinkedIn: Linkedin,
@@ -40,13 +40,10 @@ export function FooterCta() {
             Ir a la galería
           </a>
           <a
-            href={feedbackForm}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/40"
+            href="#feedback"
+            className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/40"
           >
             Calificar la charla
-            <ArrowUpRight size={16} />
           </a>
         </div>
 

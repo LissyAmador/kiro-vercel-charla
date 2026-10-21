@@ -62,10 +62,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.16 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+          className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg"
         >
-          Guía paso a paso para crear y desplegar tu primera página web con
-          Inteligencia Artificial.
+          Guía paso a paso para crear y desplegar una página web con el agente
+          Kiro de AWS, en el Congreso Informático 2026 de la Universidad Mariano
+          Gálvez de Huehuetenango.
         </motion.p>
 
         <motion.div

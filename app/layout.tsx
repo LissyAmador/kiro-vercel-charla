@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Construyendo con Kiro | AWS User Group Guatemala",
   description:
-    "Guía paso a paso de Lissy Amador para crear y desplegar tu primera página web con inteligencia artificial, Kiro y Vercel.",
+    "Guía paso a paso para crear y desplegar una página web con el agente Kiro de AWS, en el Congreso Informático 2026 de la Universidad Mariano Gálvez de Huehuetenango.",
 };
 
 export default function RootLayout({

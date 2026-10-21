@@ -1,5 +1,3 @@
-export const feedbackForm = "https://docs.google.com/forms/d/e/FORM_ID/viewform";
-
 export const docs = {
   kiro: "https://kiro.dev/docs",
   vercel: "https://vercel.com/docs",
